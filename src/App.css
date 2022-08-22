@@ -1,0 +1,31 @@
+* {
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+}
+
+.App{
+  display:grid;
+  place-content: center;
+
+  height: 100vh;
+}
+.chess-tabel{
+  border: solid 1px rgb(175, 172, 172);
+  display: grid;
+  grid-template-columns: repeat(8, 5vw);
+  grid-auto-rows: 5vw;
+}
+.cel{
+  display:grid;
+  place-content: center;
+  border: 1px solid rgb(175, 172, 172);
+  font-size: 3.5vw;
+  cursor:pointer;
+}
+.black{
+  background-color: rgb(168, 164, 164);
+}
+.cel.true{
+  border: 1px solid green;
+}
