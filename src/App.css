@@ -26,6 +26,12 @@
 .black{
   background-color: rgb(168, 164, 164);
 }
-.cel.true{
+.canmove{
   border: 1px solid green;
+}
+.enemy{
+  border: 1px solid red;
+}
+.selected{
+  border:1px solid #ff9800
 }
