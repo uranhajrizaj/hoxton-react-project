@@ -74,7 +74,8 @@
   color:#94B49F
 }
 .user-info img{
-  width:20px;
+  width:30px;
+  height:30px;
   border-radius: 50%;
 }
 
@@ -112,7 +113,7 @@ filter:brightness(1.2)
 
   .right_menu{
     display:grid;
-    grid-template-rows: 50px 1fr 20px;
+    grid-template-rows: 50px 1fr 50px;
 
   }
   .friend{
@@ -127,6 +128,7 @@ filter:brightness(1.2)
   }
   .friend img{
     width:25px;
+    height:25px;
     border-radius: 50%;
   }
   .messages li{
@@ -134,7 +136,7 @@ filter:brightness(1.2)
     padding: 0.3rem;
     background-color: white;
     border-radius: 20px;
-    width:
+   
   }
   .messages{
     background-color: #FDEEDC;
@@ -142,5 +144,26 @@ filter:brightness(1.2)
   .sent{
     display:grid;
     grid-auto-flow: column;
-    background-color: #F37878;
+ 
   }
+  .form{
+    display:grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 30px;
+
+
+}
+.form input{
+    padding: 10px;
+    background-color: #F37878;
+    color:white;
+    border: none;
+    outline: none;
+}
+
+.form button{
+    all:unset;
+    cursor:pointer;
+    color:  white; 
+    background-color: #F37878 ;
+}

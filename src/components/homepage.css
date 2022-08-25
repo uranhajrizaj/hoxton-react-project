@@ -1,0 +1,58 @@
+.countainer{
+    display:grid;
+    height:100vh;
+  
+  }
+  .signin-form{
+    display:grid;
+   
+    grid-gap: 1rem;
+    
+  }
+  .error{
+    color:  rgb(255, 10, 10);
+    font-size: 10px;
+  }
+  .countainer{
+    display:grid;
+    place-content: center;
+    height:100vh;
+    background-image: url("/1.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+  }
+  .signin-form{
+   box-shadow: 0 0 10px 0 rgba(0,0,0,1);
+    padding: 2rem;
+    border-radius: 10px;
+    background-color: transparent;
+
+  }
+  .signin-form input {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+  }
+  .signin-form button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color:  rgb(14 26 13);
+    color: rgb(162 141 92);
+    font-weight: bold;
+    cursor: pointer;
+  }
+  .signin-form button:hover{
+    background-color: rgb(162 141 92);
+    color: rgb(14 26 13);
+  }
+  .signin-form h1{
+    color: rgb(162 141 92);
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+    place-self: center;
+  }
+  

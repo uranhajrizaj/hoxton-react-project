@@ -1,123 +1,20 @@
-import { Button } from '@mui/material'
-import {useState } from 'react'
-
+import {  Navigate, Route, Routes } from 'react-router-dom'
 import './App.css'
+import { PlayPage } from './components/PlayPage'
 import { HomePage } from './components/HomePage'
-import { PlayingPage } from './components/PlayingPage'
+import { useState } from 'react'
+
 
 
 function App() {
- const[tabel , setTabel] = useState([
-   [{figure:"♜", name:"rook",color:"black",canMove:false,enemy:false,selected:false},
-   {figure:"♞", name:"knight",color:"black",canMove:false,enemy:false,selected:false},
-   {figure:"♝", name:"bishop",color:"black",canMove:false,enemy:false,selected:false},
-   {figure:"♛", name:"queen",color:"black",canMove:false,enemy:false,selected:false},
-   {figure:"♚", name:"king",color:"black",canMove:false,enemy:false,selected:false},
-   {figure:"♝", name:"bishop",color:"black",canMove:false,enemy:false,selected:false},
-   {figure:"♞", name:"knight",color:"black",canMove:false,enemy:false,selected:false},
-   {figure:"♜", name:"rook",color:"black",canMove:false,enemy:false,selected:false}],
-
-   [{figure:"♟", name:"pawn",color:"black",firstTimeMove:false,canMove:false,enemy:false,selected:false},
-   {figure:"♟", name:"pawn",color:"black",firstTimeMove:false,canMove:false,enemy:false,selected:false},
-   {figure:"♟", name:"pawn",color:"black",firstTimeMove:false,canMove:false,enemy:false,selected:false},
-   {figure:"♟", name:"pawn",color:"black",firstTimeMove:false,canMove:false,enemy:false,selected:false},
-   {figure:"♟", name:"pawn",color:"black",firstTimeMove:false,canMove:false,enemy:false,selected:false},
-   {figure:"♟", name:"pawn",color:"black",firstTimeMove:false,canMove:false,enemy:false,selected:false},
-   {figure:"♟", name:"pawn",color:"black",firstTimeMove:false,canMove:false,enemy:false,selected:false},
-   {figure:"♟", name:"pawn",color:"black",firstTimeMove:false,canMove:false,enemy:false,selected:false}],
-
-  [{figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false}],
-
-  [{figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false}],
-
-  [{figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false}],
-
-  [{figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-  {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false}],
-
- 
-  [{figure:"♙", name:"pawn",color:"white",firstTimeMove:true,canMove:false,enemy:false,selected:false},
-  {figure:"♙", name:"pawn",color:"white",firstTimeMove:true,canMove:false,enemy:false,selected:false},
-  {figure:"♙", name:"pawn",color:"white",firstTimeMove:true,canMove:false,enemy:false,selected:false},
-  {figure:"♙", name:"pawn",color:"white",firstTimeMove:true,canMove:false,enemy:false,selected:false},
-  {figure:"♙", name:"pawn",color:"white",firstTimeMove:true,canMove:false,enemy:false,selected:false},
-  {figure:"♙", name:"pawn",color:"white",firstTimeMove:true,canMove:false,enemy:false,selected:false},
-  {figure:"♙", name:"pawn",color:"white",firstTimeMove:true,canMove:false,enemy:false,selected:false},
-  {figure:"♙", name:"pawn",color:"white",firstTimeMove:true,canMove:false,enemy:false,selected:false}],
-
-  [{figure:"♖", name:"rook",color:"white",canMove:false,enemy:false,selected:false},
-  {figure:"♘", name:"knight",color:"white",canMove:false,enemy:false,selected:false},
-  {figure:"♗", name:"bishop",color:"white",canMove:false,enemy:false,selected:false},
-  {figure:"♕", name:"queen",color:"white",canMove:false,enemy:false,selected:false},
-  {figure:"♔", name:"king",color:"white",canMove:false,enemy:false,selected:false},
-  {figure:"♗", name:"bishop",color:"white",canMove:false,enemy:false,selected:false},
-  {figure: "♘", name:"knight",color:"white",canMove:false,enemy:false,selected:false},
-  {figure:"♖", name:"rook",color:"white",canMove:false,enemy:false,selected:false}],
- ])
- 
-
-
+  const[user,setUser]=useState([])
   return (
     <div className="App">
-      <div className='header'>
-         <h1> Chess game</h1>
-         <div className='user-info'>
-          <img src="https://images.pexels.com/photos/13075582/pexels-photo-13075582.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"/>
-          <h3>Uran</h3>
-         </div>
-         
-      </div>
-      <div className='main'>
-        <div className='leftmenu'>
-         <button className='hint'> Hint💡</button>
-         <button className='reset'>Reset Game</button>
-        </div>
-          <PlayingPage tabel={tabel} setTabel={setTabel}/>
-       <div className='right_menu'>
-        <div className='friend'>
-         <img src="https://images.pexels.com/photos/13075582/pexels-photo-13075582.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load"/>
-         <h4>Uran</h4>
-        </div>
-        <div className="messages">
-          <ul>
-            <li>Nice move</li>
-          </ul>
-        </div>
-        <div className='sent'>
-          <form><input/> <button>Sent</button></form>
-        </div>
-
-      </div>
-            
-      </div>
-      {/* <HomePage/> */}
+      <Routes>
+       <Route index element={<Navigate to="/homepage"/>} />
+       <Route path="/homepage" element={<HomePage setUser={setUser}/>}/>
+        <Route path="/chess_game" element={<PlayPage user={user}/>}/>
+      </Routes>
      
     </div>
   )
