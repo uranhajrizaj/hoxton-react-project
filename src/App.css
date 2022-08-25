@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 * {
   padding:0;
   margin:0;
@@ -6,15 +8,17 @@
 
 .App{
   display:grid;
-  place-content: center;
-
+ grid-template-rows: 60px 1fr;
   height: 100vh;
 }
 .chess-tabel{
-  border: solid 1px rgb(175, 172, 172);
+  /* border: solid 1px rgb(175, 172, 172); */
   display: grid;
   grid-template-columns: repeat(8, 5vw);
   grid-auto-rows: 5vw;
+  place-content: center;
+  /* transform:rotate(180deg) */
+ 
 }
 .cel{
   display:grid;
@@ -22,16 +26,121 @@
   border: 1px solid rgb(175, 172, 172);
   font-size: 3.5vw;
   cursor:pointer;
+  /* transform:rotate(180deg) */
 }
 .black{
-  background-color: rgb(168, 164, 164);
+  background-color: #CFD2CF;
+}
+.white{
+  background-color: white;
 }
 .canmove{
-  border: 1px solid green;
+  background-color:  #D9F8C4;
 }
 .enemy{
-  border: 1px solid red;
+  background-color:  #F37878;
 }
 .selected{
-  border:1px solid #ff9800
+  background-color: #FFD8A9;
 }
+
+.header{
+  display:grid;
+  grid-auto-flow: column;
+  place-content: space-between;
+  background-color: #94B49F;
+  padding:0.5rem;
+}
+.header h1{
+  font-size: 30px;
+  color:white;
+  font-family: 'Dancing Script', cursive;
+  
+}
+.main{
+  display:grid;
+  grid-auto-flow: column;
+  grid-template-columns: 9rem 1fr 20rem;
+}
+.user-info{
+  display:grid;
+  grid-auto-flow: column;
+  gap: 10px;
+  background-color: white;
+  border-radius: 10px;
+  place-self: end;
+  place-items: center;
+  padding:0.3rem;
+  color:#94B49F
+}
+.user-info img{
+  width:20px;
+  border-radius: 50%;
+}
+
+.leftmenu{
+  display:grid;
+
+  place-content: center start ;
+  padding: 1rem;
+  gap:10px;
+}
+.reset{
+  all:unset;
+  background-color: #F37878;
+  color:white;
+  padding:0.3rem;
+  border-radius: 10px;
+  cursor: pointer;
+
+}
+.hint{
+  all:unset;
+  background-color: #F1A661;
+  color:white;
+  padding:0.3rem;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+.hint:hover{
+filter:brightness(1.2)
+}
+.reset:hover{
+  filter:brightness(0.8)
+  }
+
+  .right_menu{
+    display:grid;
+    grid-template-rows: 50px 1fr 20px;
+
+  }
+  .friend{
+    display:grid;
+    grid-auto-flow: column;
+    place-content: center start ;
+    background-color: #FFD8A9;
+    color:#94B49F;
+    padding: 0.3rem;
+    gap:10px;
+    align-items: center;
+  }
+  .friend img{
+    width:25px;
+    border-radius: 50%;
+  }
+  .messages li{
+    list-style-type: none;
+    padding: 0.3rem;
+    background-color: white;
+    border-radius: 20px;
+    width:
+  }
+  .messages{
+    background-color: #FDEEDC;
+  }
+  .sent{
+    display:grid;
+    grid-auto-flow: column;
+    background-color: #F37878;
+  }
