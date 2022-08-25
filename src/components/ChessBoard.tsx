@@ -2,10 +2,11 @@ import {useState } from 'react'
 import {whiteFigureMove} from "../helpers/possibleMoves"
 import {kill} from "../helpers/killOpositeFigure"
 
-export function ChessBoard({tabel,setTabel,usehint,setUseHint}:any){
+export function ChessBoard({tabel,setTabel,usehint,setUseHint,user}:any){
     const[selectedFIgure,setSelectedFIgure]=useState([])
   return ( 
-       <div className="chess-tabel" >
+
+       <div className={`chess-tabel ${user.id===2? "second_user_table":""}`} >
         
         {//@ts-ignore
         tabel.map((row,rowIndex)=>row.map((cel,cellIndex)=>(<div onClick={()=>{
@@ -15,8 +16,8 @@ export function ChessBoard({tabel,setTabel,usehint,setUseHint}:any){
           whiteFigureMove(rowIndex,cellIndex,tabel,setTabel)
           kill(rowIndex,cellIndex,tabel,setTabel,selectedFIgure)
         
-          }}className={`cel ${(rowIndex-cellIndex)%2===0?"white":"black"} ${rowIndex}-${cellIndex} ${cel.selected? "selected":""}  ${ usehint?(cel.canMove?"canmove": ""):""} ${usehint? (cel.enemy===true? "enemy":""):""}` }>{cel.figure}</div>)))}
-      </div>
+          }}className={`cel ${(rowIndex-cellIndex)%2===0?"white":"black"} ${rowIndex}-${cellIndex} ${cel.selected? "selected":""} ${user.player===2? "second_user_cell":""} ${ usehint?(cel.canMove?"canmove": ""):""} ${usehint? (cel.enemy===true? "enemy":""):""}` }>{cel.figure}</div>)))}
+      </div> 
       
   )
 }

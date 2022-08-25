@@ -28,6 +28,14 @@
   cursor:pointer;
   /* transform:rotate(180deg) */
 }
+
+.second_user_cell{
+ transform:rotate(180deg)
+}
+.second_user_table{
+  transform:rotate(180deg)
+
+}
 .black{
   background-color: #CFD2CF;
 }
@@ -103,10 +111,24 @@
   border-radius: 10px;
   text-align: center;
   cursor: pointer;
+  position:relative;
 }
 .hint:hover{
 filter:brightness(1.2)
 }
+
+.possibleHints{
+  position:absolute;
+  background-color: #F37878 ;
+  color:white;
+  border-radius: 50%;
+  width:20px;
+  height: 20px;
+  top: -8px;
+  right: -5px
+}
+
+
 .reset:hover{
   filter:brightness(0.8)
   }

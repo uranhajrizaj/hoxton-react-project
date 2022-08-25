@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { ChessBoard } from "./ChessBoard";
 
 import { Hedaer } from "./Header";
@@ -81,16 +81,27 @@ export function PlayPage({user}:any){
        {figure:"♖", name:"rook",color:"white",canMove:false,enemy:false,selected:false}],
       ])
     const[usehint,setUseHint]=useState(false)
-   
+    const[userssignin,setUsersSignin]=useState([])
+    useEffect(() => {
+      setInterval(() => {
+        fetch(`http://localhost:3005/sign_in`)
+        .then((response)=>response.json())
+        .then(usersFromServer=>setUsersSignin(usersFromServer))
+      }, 1000);
+    }, []);
+
     return (
         <>
+        {userssignin.length===2 ?
+          <>
         <Hedaer user={user}/>
       <div className='main'>
           <LeftMenu setUseHint={setUseHint}/>
-          <ChessBoard tabel={tabel} setTabel={setTabel} usehint={usehint} setUseHint={setUseHint}/>
+          <ChessBoard tabel={tabel} setTabel={setTabel} usehint={usehint} setUseHint={setUseHint} userssignin={userssignin} user={user}/>
           <RightMenu/>
       </div>
-     
+      </> : <h1>Waitinggg for your friend</h1>
+}
       </>
     )
 }

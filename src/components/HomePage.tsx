@@ -17,7 +17,13 @@ const navigate=useNavigate()
                       if(user.password===password) {
                         setUser(user)
                          navigate('/chess_game')
-                      }
+                         fetch("http://localhost:3005/sign_in",{
+                          method: "POST",
+                          headers: {
+                            "Content-Type": "application/json",
+                          },
+                          body: JSON.stringify(user),
+                        })}
                       else{ setError(true)}
                     })  
                   }
