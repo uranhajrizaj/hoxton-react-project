@@ -189,3 +189,16 @@ filter:brightness(1.2)
     color:  white; 
     background-color: #F37878 ;
 }
+
+.loading{
+  display:grid;
+  place-content: center;
+  background-color: #94B49F;
+  height:100vh
+}
+.loading_message{
+  display:grid;
+  color:white;
+  gap:10px;
+  place-items: center;
+}

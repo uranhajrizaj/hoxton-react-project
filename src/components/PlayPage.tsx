@@ -6,88 +6,34 @@ import { LeftMenu } from "./LeftMenu";
 import { RightMenu } from "./RightMenu";
 
 export function PlayPage({user}:any){
-    const[tabel , setTabel] = useState([
-        [{figure:"♜", name:"rook",color:"black",canMove:false,enemy:false,selected:false},
-        {figure:"♞", name:"knight",color:"black",canMove:false,enemy:false,selected:false},
-        {figure:"♝", name:"bishop",color:"black",canMove:false,enemy:false,selected:false},
-        {figure:"♛", name:"queen",color:"black",canMove:false,enemy:false,selected:false},
-        {figure:"♚", name:"king",color:"black",canMove:false,enemy:false,selected:false},
-        {figure:"♝", name:"bishop",color:"black",canMove:false,enemy:false,selected:false},
-        {figure:"♞", name:"knight",color:"black",canMove:false,enemy:false,selected:false},
-        {figure:"♜", name:"rook",color:"black",canMove:false,enemy:false,selected:false}],
-     
-        [{figure:"♟", name:"pawn",color:"black",firstTimeMove:false,canMove:false,enemy:false,selected:false},
-        {figure:"♟", name:"pawn",color:"black",firstTimeMove:false,canMove:false,enemy:false,selected:false},
-        {figure:"♟", name:"pawn",color:"black",firstTimeMove:false,canMove:false,enemy:false,selected:false},
-        {figure:"♟", name:"pawn",color:"black",firstTimeMove:false,canMove:false,enemy:false,selected:false},
-        {figure:"♟", name:"pawn",color:"black",firstTimeMove:false,canMove:false,enemy:false,selected:false},
-        {figure:"♟", name:"pawn",color:"black",firstTimeMove:false,canMove:false,enemy:false,selected:false},
-        {figure:"♟", name:"pawn",color:"black",firstTimeMove:false,canMove:false,enemy:false,selected:false},
-        {figure:"♟", name:"pawn",color:"black",firstTimeMove:false,canMove:false,enemy:false,selected:false}],
-     
-       [{figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false}],
-     
-       [{figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false}],
-     
-       [{figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false}],
-     
-       [{figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false},
-       {figure:"",name:"",color:"",canMove:false,enemy:false,selected:false}],
-     
-      
-       [{figure:"♙", name:"pawn",color:"white",firstTimeMove:true,canMove:false,enemy:false,selected:false},
-       {figure:"♙", name:"pawn",color:"white",firstTimeMove:true,canMove:false,enemy:false,selected:false},
-       {figure:"♙", name:"pawn",color:"white",firstTimeMove:true,canMove:false,enemy:false,selected:false},
-       {figure:"♙", name:"pawn",color:"white",firstTimeMove:true,canMove:false,enemy:false,selected:false},
-       {figure:"♙", name:"pawn",color:"white",firstTimeMove:true,canMove:false,enemy:false,selected:false},
-       {figure:"♙", name:"pawn",color:"white",firstTimeMove:true,canMove:false,enemy:false,selected:false},
-       {figure:"♙", name:"pawn",color:"white",firstTimeMove:true,canMove:false,enemy:false,selected:false},
-       {figure:"♙", name:"pawn",color:"white",firstTimeMove:true,canMove:false,enemy:false,selected:false}],
-     
-       [{figure:"♖", name:"rook",color:"white",canMove:false,enemy:false,selected:false},
-       {figure:"♘", name:"knight",color:"white",canMove:false,enemy:false,selected:false},
-       {figure:"♗", name:"bishop",color:"white",canMove:false,enemy:false,selected:false},
-       {figure:"♕", name:"queen",color:"white",canMove:false,enemy:false,selected:false},
-       {figure:"♔", name:"king",color:"white",canMove:false,enemy:false,selected:false},
-       {figure:"♗", name:"bishop",color:"white",canMove:false,enemy:false,selected:false},
-       {figure: "♘", name:"knight",color:"white",canMove:false,enemy:false,selected:false},
-       {figure:"♖", name:"rook",color:"white",canMove:false,enemy:false,selected:false}],
-      ])
+    const[tabel , setTabel] = useState([])
     const[usehint,setUseHint]=useState(false)
     const[userssignin,setUsersSignin]=useState([])
     useEffect(() => {
-      setInterval(() => {
         fetch(`http://localhost:3005/sign_in`)
         .then((response)=>response.json())
         .then(usersFromServer=>setUsersSignin(usersFromServer))
-      }, 1000);
+  
+    }, []);
+
+    useEffect(() => {
+      const Interval1= setInterval(() => {
+        if(userssignin.length===2) clearInterval(Interval1)
+        fetch(`http://localhost:3005/sign_in`)
+        .then((response)=>response.json())
+        .then(usersFromServer=>setUsersSignin(usersFromServer))
+         
+        }, 1000);
+      }, []);
+
+    useEffect(() => {
+    setInterval(() => {
+        fetch(`http://localhost:3005/board`)
+        .then((response)=>response.json())
+        .then(boardFromServer=>setTabel(boardFromServer))
+
+
+      }, 5000);
     }, []);
 
     return (
@@ -100,7 +46,7 @@ export function PlayPage({user}:any){
           <ChessBoard tabel={tabel} setTabel={setTabel} usehint={usehint} setUseHint={setUseHint} userssignin={userssignin} user={user}/>
           <RightMenu/>
       </div>
-      </> : <h1>Waitinggg for your friend</h1>
+      </> : <div className="loading"> <div className="loading_message" ><h1>Loading....</h1> <h3>Waiting for your friend to conect!</h3></div> </div>
 }
       </>
     )
