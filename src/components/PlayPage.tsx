@@ -9,7 +9,7 @@ export function PlayPage({ user }: any) {
   const [state, setState] = useState<any>({ board: [], turn: 'white' })
   const [usehint, setUseHint] = useState(false)
   const [userssignin, setUsersSignin] = useState([])
-
+  const [winner,setWinner]=useState("")
   const { board } = state;
 
   useEffect(() => {
@@ -45,8 +45,8 @@ export function PlayPage({ user }: any) {
         <>
           <Hedaer user={user} />
           <div className='main'>
-            <LeftMenu setUseHint={setUseHint} />
-            <ChessBoard state={state} setState={setState} usehint={usehint} setUseHint={setUseHint} userssignin={userssignin} user={user} />
+            <LeftMenu setUseHint={setUseHint} setState={setState} />
+            <ChessBoard state={state} setState={setState} usehint={usehint} setUseHint={setUseHint} userssignin={userssignin} user={user} setWinner={setWinner}/>
             <RightMenu />
           </div>
         </> : <div className="loading"> <div className="loading_message" ><h1>Loading....</h1> <h3>Waiting for your friend to conect!</h3></div> </div>

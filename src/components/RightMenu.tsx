@@ -1,6 +1,6 @@
 import { FaPaperPlane } from "react-icons/fa";
 export function RightMenu(){
-//  const[]=useState
+
     return(
         <div className='right_menu'>
         <div className='friend'>

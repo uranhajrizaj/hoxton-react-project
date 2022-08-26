@@ -5,7 +5,9 @@ export function whiteFigureMove(rowIndex: number, colIndex: number, state: any, 
   if (state.board[rowIndex][colIndex].color === "white" && user.player === 1) {
 
     if (state.board[rowIndex][colIndex].name === "rook") {
-      const newTabel = [...state.board]
+      //@ts-ignore
+      const newTabel =  state.board.map(row=>row.map(cell=> cell.selected===true? {...cell, selected:false}:cell))
+    
       newTabel[rowIndex][colIndex].selected = true
 
       //check for emeny in the right
@@ -59,7 +61,8 @@ export function whiteFigureMove(rowIndex: number, colIndex: number, state: any, 
     }
 
     if (state.board[rowIndex][colIndex].name === "queen") {
-      const newTabel = [...state.board]
+      //@ts-ignore
+      const newTabel =  state.board.map(row=>row.map(cell=> cell.selected===true? {...cell, selected:false}:cell))
       newTabel[rowIndex][colIndex].selected = true
 
       //check for emeny in the right
@@ -166,7 +169,8 @@ export function whiteFigureMove(rowIndex: number, colIndex: number, state: any, 
     }
 
     if (state.board[rowIndex][colIndex].name === "bishop") {
-      const newTabel = [...state.board]
+       //@ts-ignore
+       const newTabel =  state.board.map(row=>row.map(cell=> cell.selected===true? {...cell, selected:false}:cell))
       newTabel[rowIndex][colIndex].selected = true
       //check for possibble move and enemy emeny in \ diagonal up
       for (let i = 1;i < 8;i++) {
@@ -225,7 +229,8 @@ export function whiteFigureMove(rowIndex: number, colIndex: number, state: any, 
     }
 
     if (state.board[rowIndex][colIndex].name === "knight") {
-      const newTabel = [...state.board]
+       //@ts-ignore
+       const newTabel =  state.board.map(row=>row.map(cell=> cell.selected===true? {...cell, selected:false}:cell))
       newTabel[rowIndex][colIndex].selected = true
 
 
@@ -317,7 +322,8 @@ export function whiteFigureMove(rowIndex: number, colIndex: number, state: any, 
     }
 
     if (state.board[rowIndex][colIndex].name === "king") {
-      const newTabel = [...state.board]
+       //@ts-ignore
+       const newTabel =  state.board.map(row=>row.map(cell=> cell.selected===true? {...cell, selected:false}:cell))
       newTabel[rowIndex][colIndex].selected = true
 
       //check for possible moves up
@@ -407,7 +413,8 @@ export function whiteFigureMove(rowIndex: number, colIndex: number, state: any, 
     }
 
     if (state.board[rowIndex][colIndex].name === "pawn") {
-      const newTabel = [...state.board]
+       //@ts-ignore
+       const newTabel =  state.board.map(row=>row.map(cell=> cell.selected===true? {...cell, selected:false}:cell))
       newTabel[rowIndex][colIndex].selected = true
 
       //check for possible moves up
@@ -444,7 +451,8 @@ export function whiteFigureMove(rowIndex: number, colIndex: number, state: any, 
   if (state.board[rowIndex][colIndex].color === "black" && user.player === 2) {
 
     if (state.board[rowIndex][colIndex].name === "rook") {
-      const newTabel = [...state.board]
+       //@ts-ignore
+       const newTabel =  state.board.map(row=>row.map(cell=> cell.selected===true? {...cell, selected:false}:cell))
       newTabel[rowIndex][colIndex].selected = true
 
       //check for emeny in the right
@@ -498,7 +506,8 @@ export function whiteFigureMove(rowIndex: number, colIndex: number, state: any, 
     }
 
     if (state.board[rowIndex][colIndex].name === "queen") {
-      const newTabel = [...state.board]
+       //@ts-ignore
+       const newTabel =  state.board.map(row=>row.map(cell=> cell.selected===true? {...cell, selected:false}:cell))
       newTabel[rowIndex][colIndex].selected = true
 
       //check for emeny in the right
@@ -605,7 +614,8 @@ export function whiteFigureMove(rowIndex: number, colIndex: number, state: any, 
     }
 
     if (state.board[rowIndex][colIndex].name === "bishop") {
-      const newTabel = [...state.board]
+       //@ts-ignore
+       const newTabel =  state.board.map(row=>row.map(cell=> cell.selected===true? {...cell, selected:false}:cell))
       newTabel[rowIndex][colIndex].selected = true
       //check for possibble move and enemy emeny in \ diagonal up
       for (let i = 1;i < 8;i++) {
@@ -664,7 +674,8 @@ export function whiteFigureMove(rowIndex: number, colIndex: number, state: any, 
     }
 
     if (state.board[rowIndex][colIndex].name === "knight") {
-      const newTabel = [...state.board]
+      //@ts-ignore
+      const newTabel =  state.board.map(row=>row.map(cell=> cell.selected===true? {...cell, selected:false}:cell))
       newTabel[rowIndex][colIndex].selected = true
 
 
@@ -751,7 +762,8 @@ export function whiteFigureMove(rowIndex: number, colIndex: number, state: any, 
     }
 
     if (state.board[rowIndex][colIndex].name === "king") {
-      const newTabel = [...state.board]
+       //@ts-ignore
+       const newTabel =  state.board.map(row=>row.map(cell=> cell.selected===true? {...cell, selected:false}:cell))
       newTabel[rowIndex][colIndex].selected = true
 
       //check for possible moves up
@@ -841,7 +853,8 @@ export function whiteFigureMove(rowIndex: number, colIndex: number, state: any, 
     }
 
     if (state.board[rowIndex][colIndex].name === "pawn") {
-      const newTabel = [...state.board]
+       //@ts-ignore
+       const newTabel =  state.board.map(row=>row.map(cell=> cell.selected===true? {...cell, selected:false}:cell))
       newTabel[rowIndex][colIndex].selected = true
 
       //check for possible moves up

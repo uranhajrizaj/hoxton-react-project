@@ -96,12 +96,11 @@
         },
         {
           "figure": "♟",
-          "name": "pawn",
+          "selected": false,
           "color": "black",
-          "firstTimeMove": false,
+          "name": "pawn",
           "canMove": false,
-          "enemy": false,
-          "selected": false
+          "enemy": false
         },
         {
           "figure": "♟",
@@ -113,10 +112,10 @@
           "selected": false
         },
         {
-          "figure": "",
+          "figure": "♟",
           "selected": false,
-          "color": "",
-          "name": "",
+          "color": "black",
+          "name": "pawn",
           "canMove": false,
           "enemy": false
         },
@@ -183,12 +182,12 @@
           "selected": false
         },
         {
-          "figure": "♟",
-          "name": "pawn",
-          "color": "black",
+          "figure": "",
+          "selected": false,
+          "color": "",
+          "name": "",
           "canMove": false,
-          "enemy": false,
-          "selected": false
+          "enemy": false
         },
         {
           "figure": "",
@@ -244,207 +243,6 @@
           "figure": "",
           "name": "",
           "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        }
-      ],
-      [
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        }
-      ],
-      [
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "♙",
-          "name": "pawn",
-          "color": "white",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "",
-          "name": "",
-          "color": "",
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        }
-      ],
-      [
-        {
-          "figure": "♙",
-          "name": "pawn",
-          "color": "white",
-          "firstTimeMove": true,
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "♙",
-          "name": "pawn",
-          "color": "white",
-          "firstTimeMove": true,
-          "canMove": false,
-          "enemy": false,
-          "selected": false
-        },
-        {
-          "figure": "♙",
-          "name": "pawn",
-          "color": "white",
-          "firstTimeMove": true,
           "canMove": false,
           "enemy": false,
           "selected": false
@@ -454,6 +252,180 @@
           "selected": false,
           "color": "",
           "name": "",
+          "canMove": false,
+          "enemy": false
+        },
+        {
+          "figure": "",
+          "name": "",
+          "color": "",
+          "canMove": false,
+          "enemy": false,
+          "selected": false
+        },
+        {
+          "figure": "",
+          "name": "",
+          "color": "",
+          "canMove": false,
+          "enemy": false,
+          "selected": false
+        },
+        {
+          "figure": "",
+          "name": "",
+          "color": "",
+          "canMove": false,
+          "enemy": false,
+          "selected": false
+        },
+        {
+          "figure": "",
+          "name": "",
+          "color": "",
+          "canMove": false,
+          "enemy": false,
+          "selected": false
+        }
+      ],
+      [
+        {
+          "figure": "",
+          "name": "",
+          "color": "",
+          "canMove": false,
+          "enemy": false,
+          "selected": false
+        },
+        {
+          "figure": "",
+          "name": "",
+          "color": "",
+          "canMove": false,
+          "enemy": false,
+          "selected": false
+        },
+        {
+          "figure": "",
+          "name": "",
+          "color": "",
+          "canMove": false,
+          "enemy": false,
+          "selected": false
+        },
+        {
+          "figure": "",
+          "name": "",
+          "color": "",
+          "canMove": false,
+          "enemy": false,
+          "selected": false
+        },
+        {
+          "figure": "",
+          "name": "",
+          "color": "",
+          "canMove": false,
+          "enemy": false,
+          "selected": false
+        },
+        {
+          "figure": "",
+          "name": "",
+          "color": "",
+          "canMove": false,
+          "enemy": false,
+          "selected": false
+        },
+        {
+          "figure": "",
+          "name": "",
+          "color": "",
+          "canMove": false,
+          "enemy": false,
+          "selected": false
+        },
+        {
+          "figure": "",
+          "name": "",
+          "color": "",
+          "canMove": false,
+          "enemy": false,
+          "selected": false
+        }
+      ],
+      [
+        {
+          "figure": "",
+          "name": "",
+          "color": "",
+          "canMove": false,
+          "enemy": false,
+          "selected": false
+        },
+        {
+          "figure": "",
+          "selected": false,
+          "color": "",
+          "name": "",
+          "canMove": false,
+          "enemy": false
+        },
+        {
+          "figure": "",
+          "name": "",
+          "color": "",
+          "canMove": false,
+          "enemy": false,
+          "selected": false
+        },
+        {
+          "figure": "",
+          "selected": false,
+          "color": "",
+          "name": "",
+          "canMove": false,
+          "enemy": false
+        },
+        {
+          "figure": "",
+          "name": "",
+          "color": "",
+          "canMove": false,
+          "enemy": false,
+          "selected": false
+        },
+        {
+          "figure": "♙",
+          "name": "pawn",
+          "color": "white",
+          "canMove": false,
+          "enemy": false,
+          "selected": false
+        },
+        {
+          "figure": "",
+          "name": "",
+          "color": "",
+          "canMove": false,
+          "enemy": false,
+          "selected": false
+        },
+        {
+          "figure": "",
+          "name": "",
+          "color": "",
+          "canMove": false,
+          "enemy": false,
+          "selected": false
+        }
+      ],
+      [
+        {
+          "figure": "♙",
+          "selected": false,
+          "color": "white",
+          "name": "pawn",
           "canMove": false,
           "enemy": false
         },
@@ -468,30 +440,51 @@
         },
         {
           "figure": "♙",
-          "name": "pawn",
+          "selected": false,
           "color": "white",
-          "firstTimeMove": true,
+          "name": "pawn",
           "canMove": false,
-          "enemy": false,
-          "selected": false
+          "enemy": false
         },
         {
           "figure": "♙",
-          "name": "pawn",
+          "selected": false,
           "color": "white",
-          "firstTimeMove": true,
+          "name": "pawn",
           "canMove": false,
-          "enemy": false,
-          "selected": false
+          "enemy": false
         },
         {
           "figure": "♙",
-          "name": "pawn",
+          "selected": false,
           "color": "white",
-          "firstTimeMove": true,
+          "name": "pawn",
           "canMove": false,
-          "enemy": false,
-          "selected": false
+          "enemy": false
+        },
+        {
+          "figure": "",
+          "selected": false,
+          "color": "",
+          "name": "",
+          "canMove": false,
+          "enemy": false
+        },
+        {
+          "figure": "♙",
+          "selected": false,
+          "color": "white",
+          "name": "pawn",
+          "canMove": false,
+          "enemy": false
+        },
+        {
+          "figure": "♙",
+          "selected": false,
+          "color": "white",
+          "name": "pawn",
+          "canMove": false,
+          "enemy": false
         }
       ],
       [
@@ -521,11 +514,11 @@
         },
         {
           "figure": "♕",
-          "name": "queen",
+          "selected": false,
           "color": "white",
+          "name": "queen",
           "canMove": false,
-          "enemy": false,
-          "selected": false
+          "enemy": false
         },
         {
           "figure": "♔",
@@ -537,45 +530,45 @@
         },
         {
           "figure": "♗",
-          "name": "bishop",
+          "selected": false,
           "color": "white",
+          "name": "bishop",
           "canMove": false,
-          "enemy": false,
-          "selected": false
+          "enemy": false
         },
         {
           "figure": "♘",
-          "name": "knight",
+          "selected": false,
           "color": "white",
+          "name": "knight",
           "canMove": false,
-          "enemy": false,
-          "selected": false
+          "enemy": false
         },
         {
           "figure": "♖",
-          "name": "rook",
+          "selected": false,
           "color": "white",
+          "name": "rook",
           "canMove": false,
-          "enemy": false,
-          "selected": false
+          "enemy": false
         }
       ]
     ]
   },
   "sign_in": [
     {
-      "name": "Pat Smith",
-      "id": "patsmith@gmail.com",
-      "player": 1,
-      "password": "psmith",
-      "image": "https://images.pexels.com/photos/6489667/pexels-photo-6489667.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
-    },
-    {
       "name": "John Doe",
       "id": "johndoe@gmail.com",
       "password": "jdoe",
       "player": 2,
       "image": "https://images.pexels.com/photos/1571673/pexels-photo-1571673.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+    },
+    {
+      "name": "Pat Smith",
+      "id": "patsmith@gmail.com",
+      "player": 1,
+      "password": "psmith",
+      "image": "https://images.pexels.com/photos/6489667/pexels-photo-6489667.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
     }
   ]
 }
